@@ -1,5 +1,5 @@
 
-/**
+/**Map sirve para simplificar la estructura de un objeto
  * Se quiere que el customer este a la misma altura que los demas elementos del objeto orders, para esto usamos map, con el fin de simplificar
  * la estructura de las ordenes.
  * map genera un nuevo arreglo a partir de un arreglo existente y ademas lo podemos recorrer
@@ -60,17 +60,18 @@ let orders = [
         }
     })
 
-    //console.log("orders =>" , orders)
-    //console.log("newOrders =>" , newOrders)
-    //console.log("newOrders2 =>" , newOrders2)
+    console.log("orders =>" , orders)
+    console.log("newOrders =>" , newOrders)
+    console.log("newOrders2 =>" , newOrders2)
 
     /**
      * El methodo map tambien recibe el parametro index, me dice la ubicacion que tiene order en el arreglo original
-     * El tercer parametro que recibe map es el arreglo original
-     */
+     * El tercer parametro que recibe map es el arreglo original*/
+  
 
      orders.map((order,index,arr) =>{
         console.log("Index: ",index)
-     })
+     })   
+
 
 
