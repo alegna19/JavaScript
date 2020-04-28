@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>API Using Fetch</h1>
+        <div class="container my-5 text-center">
+            <button class="btn btn-danger w-100" onclick="getValue()">Get</button>
+            <div class="class mt-5" id="content">
+
+            </div>
+        </div>
+        <script>
+            var contenido = document.getElementById('content');
+            function getValue() {
+               fetch('https://randomuser.me/api/')//fetch consume un api 
+               .then(res => res.json())//es una promesa, me devuelve una respuesta a la promesa.
+               .then(data => {
+                   console.log(data.results['0'])
+                   contenido.innerHTML = `
+                   <img src="${data.results['0'].picture.large}" width="100px" class="img-fluid rounded-circle"> 
+                   <p>Name: ${data.results['0'].name.first} </p>
+                   <p>Age: ${data.results['0'].registered.age} </p>
+                   <p>Email: ${data.results['0'].email} </p>
+                   `
+               })
+            }
+        </script>
+   
+  </body>
+</html>

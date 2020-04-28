@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Funciones Arrow</title>
+</head>
+<body>
+    <h1 id="saludo"></h1>
+    <h1 id="suma"> "El resultado de la suma: "</h1>
+
+    <script>
+        var saludoId = document.getElementById('saludo');
+
+        //function saludar(nombre){
+          //  return "hola " + nombre;
+   // }
+
+// saludar es el nombre de la funcion va hacer igual a los parametros que va a tener que en este caso es nombre,
+// despues de la flecha => se le pasa lo que va a devolver la funcion, en este caso "Hola..." + nombre;
+    var saludar = nombre => "Hola..." + nombre;
+    saludoId.innerHTML = saludar("Angie");//el innerHTML es para interactuar el javascript con el html
+
+    var sumaId = document.getElementById('suma');
+    var sumar = (num1,num2) => num1 + num2;
+    sumaId.innerHTML = sumar(10,20);
+
+    var sumar = (num1,num2) => {
+        var num3 = 5;
+        return (num1+num2+num3);
+    }
+    sumaId.innerHTML = sumar(10,20);
+
+    </script>
+</body>
+</html>
