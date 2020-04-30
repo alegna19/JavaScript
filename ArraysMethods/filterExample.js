@@ -1,6 +1,6 @@
 //Array Filter()
 //Retorna el resultado en un nuevo arreglo
-//Rretorna un booleano True o false
+//Retorna un booleano True o false
 
 let numbers = [23,45,14,66,94,33,4,9];
 let breakPoint = 30;
