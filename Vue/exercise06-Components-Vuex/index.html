@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuex</title>
+    
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+   <!-- <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex@3.5.1/dist/vuex.js"></script>
+
+</head>
+
+<body>
+    <div id="app" class="container mt-5">
+        <titulo></titulo>
+    </div>
+
+    <script>
+        Vue.component('titulo',{
+            template: 
+            `
+            <div>
+                <h1>numero {{$store.state.numero}}</h1>
+                <hijo></hijo>
+            </div>
+            `
+        });
+        Vue.component('hijo',{
+            template: 
+             `
+            <div>
+                <button>+</button>
+            </div>
+            `
+        });
+        const store = new Vuex.Store({
+            state: {
+                numero:10
+            }
+
+        })
+
+
+
+
+    </script>
+
+    <script>
+        new Vue({
+            el: "#app",
+            store
+        });
+    </script>
+</body>
+</html>

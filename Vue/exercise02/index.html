@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise2</title>
+    
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app" class="container mt-5">
+       <div  :class="['text-white', 'p-3', fondo]">
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Totam asperiores neque, dignissimos mollitia beatae expedita officia
+            reiciendis quasi aliquid veritatis soluta doloremque incidunt aut ducimus laudantium earum qui laboriosam dolores?</p>
+       </div>
+       <input type="text" class="form-control my-3" v-model="fondo"> 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="02.js"></script>
+</body>
+</html>

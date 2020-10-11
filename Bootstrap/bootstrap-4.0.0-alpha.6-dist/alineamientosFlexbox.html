@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        .fondo { background: rgb(197, 97, 119);}
+        .borde { border: 1px #000 solid; text-align: center; height: 50px; text-size-adjust: 10px; }
+        .color1 { color: #eeeeee;}
+        .color2 { background: #fcc314;}
+        .color3 { color: #2959a7;}
+        .color4 { background: #d3a2a2; height: 500px;}
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Alineamientos</h1>
+    </div>
+    <div class="container">
+        <div class="row color4 align-items-center justify-content-around">
+            <div class="borde fondo col-1 align-self-start">1</div>
+            <div class="borde fondo col">2
+                <div class="row color2">
+                    <div class="col color2">sub1</div>
+                    <div class="col color2">sub2</div>
+                    <div class="col color2">sub3</div>
+                </div>
+
+            </div>
+            <div class="borde fondo col-1 offset-md-3">3</div>
+            <div class="borde fondo col-1">4</div>
+            <div class="borde fondo col-1 flex-first">5</div>
+            <div class="borde fondo col-1 align-self-end">6</div>
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

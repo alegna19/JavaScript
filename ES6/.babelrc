@@ -1,0 +1,4 @@
+//presets transforma de codigo ES6 a Javascript
+{
+    "presets": ["@babel/preset-env"]
+  }

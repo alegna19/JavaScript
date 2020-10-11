@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+          <!-- Bootstrap CSS -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{titulo}}</h1>
+        <input type="text" v-model="nuevaFruta" @keyup.enter="agregarFruta"> 
+        <button @click="agregarFruta">Agregar</button>
+        <ul>
+            <li v-for="fruta of frutas">
+                <input type="number" v-model.number="fruta.cantidad">
+                {{fruta.nombre}}
+                <button @click="fruta.cantidad++" >+</button>
+                <span v-if="fruta.cantidad === 0"> - Sin Stock</span>
+            </li>
+        </ul>
+        <h4>TOTAL: {{sumFrutas}}</h4>
+        <h2>{{nombres}}</h2>
+        <ul>
+            <li v-for="cliente of clientes">
+                {{cliente.nombre}} - {{cliente.apellido}}
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="01.js"></script>
+       <div class="bg-warning" :class="['text-white', 'p-3', fondo]">
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Totam asperiores neque, dignissimos mollitia beatae expedita officia
+            reiciendis quasi aliquid veritatis soluta doloremque incidunt aut ducimus laudantium earum qui laboriosam dolores?</p>
+       </div>
+</body>
+
+</html>
